@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
-
+const defaultTheme = require("tailwindcss/defaultTheme");
 function withOpacityValue(variable) {
   return ({opacityValue}) => {
     if (opacityValue === undefined) {
@@ -24,6 +24,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        "p-blue-90": "#265C62",
+        "p-blue-70": "#337A83",
+        "p-blue-50": "#4099A4",
+        "p-blue-30": "#4DB1C9",
         current: 'currentColor',
         transparent: 'transparent',
 
@@ -109,7 +113,7 @@ module.exports = {
         b: '0 10px 30px 0 rgba(82,63,104,.06)'
       },
       fontFamily: {
-        sans: [
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans,
           '"Inter var"',
           'Inter',
           '-apple-system',
@@ -181,7 +185,7 @@ module.exports = {
       }
     }
   },
-  plugins: [
+  plugins: [require("@tailwindcss/forms"),
     plugin(function ({addUtilities}) {
       addUtilities({
         '.icon-xs': {

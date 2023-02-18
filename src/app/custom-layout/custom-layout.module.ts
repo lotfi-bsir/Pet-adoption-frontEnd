@@ -10,15 +10,20 @@ import { SidebarModule } from '../../@vex/components/sidebar/sidebar.module';
 import { QuickpanelModule } from '../../@vex/layout/quickpanel/quickpanel.module';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from "@angular/router";
-import { HeaderComponent } from './home/header/header.component';
-import { MainComponent } from './home/main/main.component';
-import { FooterComponent } from './home/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+
 import {IconsFaModule} from "../pages/ui/icons/icons-fa/icons-fa.module";
 import {MatIconModule} from "@angular/material/icon";
+import { BannerComponent } from './components/banner/banner.component';
+import { CtaComponent } from './components/cta/cta.component';
+import { FeatureComponent } from './components/feature/feature.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { StatsComponent } from './components/stats/stats.component';
+
 
 
 @NgModule({
-  declarations: [CustomLayoutComponent, HomeComponent, HeaderComponent, MainComponent, FooterComponent],
+  declarations: [CustomLayoutComponent, HomeComponent, HeaderComponent, BannerComponent, CtaComponent, FeatureComponent, NewsletterComponent, StatsComponent],
   imports: [
     CommonModule,
     LayoutModule,
